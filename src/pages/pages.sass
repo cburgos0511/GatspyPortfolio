@@ -1,7 +1,86 @@
-$main-color: rgb(187,161,107)
+$main-color: rgb(218,94,39)
+$main-color-light: rgba(218,94,39,0.5)
 $title: 28px
+$buzz-word-size: 160px
+$main-text: #fff
+$main-text-light: #b8b8b8
+$font-fam: PT serif
+$logo-font: 22px
+$a: auto
+$bold: 700
+$transition: all .3s ease
+$test: solid 1px white
 
 *
     margin: 0
     padding: 0
-    
+
+// Index / Home
+
+.home-intro
+    height: calc(100vh - 128px)
+    max-width: 85vw
+    margin: 0 $a
+    .home-intro-inner
+
+        .buzzwords
+
+            .buzzwords-line
+                line-height: .9
+                display: flex
+
+                .buzzword-wrapper
+
+                    .__char
+                        color: $main-text
+                        font-size: $buzz-word-size
+                        transition: $transition
+                        font-weight: $bold
+                        letter-spacing: -4px
+                        text-shadow: -20px 10px 10px rgba(0,0,0,.3), 0 20px 50px rgba(0,0,0,.3)
+
+                        &:hover
+                            animation: bounce 1s ease
+
+.home-about
+    max-width: 55vw
+    margin: 8% 0 8% 15%
+
+    p
+        color: $main-text-light
+
+        a
+            position: relative
+            border-bottom: 1px solid $main-color-light
+
+            &:before
+                content: ''
+                position: absolute
+                background: $main-color
+                bottom: 0
+                width: 0%
+                height: 1px
+                transition: $transition
+
+            &:hover::before
+                width: 100%
+@keyframes bounce
+
+    0%
+        transform: scale(1,1) translateY(0)
+    10%
+        transform: scale(1.2,.6) translateY(30px)
+    15%
+        transform: scale(1.2,.6) translateY(30px)
+    50%
+        transform: scale(.7,1.5) translateY(-28px)
+    70%
+        transform: scale(1.1,.68) translateY(15px)
+    85%
+        transform: scale(1,1) translateY(0)
+    100%
+        transform: scale(1,1) translateY(0)
+
+@for $i from 1 through 38
+    .__char__#{$i}
+        z-index: #{$i}
