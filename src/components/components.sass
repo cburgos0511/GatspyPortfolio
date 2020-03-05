@@ -1,0 +1,88 @@
+$main-color: rgb(218,94,39)
+$title: 28px
+$main-text: #fff
+$font-fam: PT serif
+$logo-font: 22px
+$a: auto
+$bold: 700
+$transition: all .3s ease
+
+*
+    margin: 0
+    padding: 0
+    color: $main-text
+    font-family: $font-fam
+a
+    text-decoration: none
+
+ul
+    margin: 0
+
+header
+    margin: 0 0 10vw 0
+
+    nav
+        display: flex
+        justify-content: space-between
+        padding: 40px 40px 0 40px
+
+        #logo-square
+            position: relative
+            width: 60px
+            height: 60px
+            background: $main-color
+            margin-right: 40px
+            padding: 0
+            transition: $transition
+
+            &:hover
+
+                animation: bouce 1.2s infinite
+
+            #cb
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                font-size: $logo-font
+
+        #logo
+            display: flex
+
+            #lg-name
+                margin: $a 0 $a 0
+                font-size: $logo-font
+
+        .menu
+            margin: $a 0 $a 0
+
+            ul
+                margin: 0
+                display: flex
+                li
+                    list-style: none
+                    margin-left: 20px
+                    margin-bottom: 0
+                    a
+                        font-weight: $bold
+                        transition: $transition
+
+                        &:hover
+                            color: $main-color
+
+    @keyframes bouce
+
+        0%
+            transform: scale(1,1) translateY(0)
+        10%
+            transform: scale(1.1,.9) translateY(0)
+        30%
+            transform: scale(.9,1.1) translateY(-10px)
+        50%
+            transform: scale(1.05,.95) translateY(0)
+        57%
+            transform: scale(1,1) translateY(-7px)
+        64%
+            transform: scale(1,1) translateY(0)
+        100%
+            transform: scale(1,1) translateY(0)
