@@ -10,6 +10,7 @@ $a: auto
 $bold: 700
 $transition: all .3s ease
 $test: solid 1px white
+$screen-size: 85vw
 
 *
     margin: 0
@@ -84,3 +85,55 @@ $test: solid 1px white
 @for $i from 1 through 38
     .__char__#{$i}
         z-index: #{$i}
+
+// Projects / Work
+
+.project-intro
+    width: $screen-size - 18vw
+    margin: 18vw $a 0 $a
+
+    h1
+        position: relative
+        display: flex
+        font-size: $title * 2.7
+        font-family: $font-fam
+
+.project-projects
+    margin: 0 2vw
+    .project
+        margin: 20vw 0
+        display: flex
+        &:nth-child(even)
+            flex-direction: row-reverse
+
+        .img-wrapper
+            overflow: hidden
+            width: 50%
+
+            .project-img
+
+        .contain
+            color: white
+            width: 30%
+            margin: $a
+
+            h1
+                font-family: $font-fam
+
+            button
+                height: 50px
+                width: 150px
+                font-size: 14px
+                background: transparent
+                padding: $a
+                border: 1px solid $main-color
+                text-transform: uppercase
+                font-weight: 400
+                letter-spacing: 1px
+                color: $main-color
+                transition: $transition
+                margin-top: 2rem
+
+                &:hover
+                    background: $main-color
+                    color: $main-text

@@ -1,0 +1,97 @@
+$main-color: rgb(218,94,39)
+$main-color-light: rgba(218,94,39,0.5)
+$title: 28px
+$buzz-word-size: 160px
+$main-text: #fff
+$main-text-light: #b8b8b8
+$font-fam: PT serif
+$logo-font: 22px
+$a: auto
+$bold: 700
+$transition: all .3s ease
+$test: solid 1px white
+$screen-size: 85vw
+
+.temp-head
+    margin: 5vw $a 5vw $a
+    width: 50%
+
+    .proj-info
+        display: flex
+        justify-content: center
+        p
+            margin: 0 2vw
+            text-transform: uppercase
+            font-size: 14px
+            letter-spacing: 3px
+            color: $main-text-light
+            font-weight: $bold
+
+    .temp-name
+        margin: 5vw 0 5vw 0
+        font-family: $font-fam
+        text-align: center
+        font-size: $buzz-word-size /2
+
+.temp-container
+
+    .temp-project-img
+        width: 50%
+        margin: $a
+
+    .temp-content
+        width: 50%
+        margin: 10vw $a 5vw $a
+
+        .temp-content-p
+            margin: 15vw 0 5vw 0
+
+            .first-letter
+                float: left
+                font-size: $title * 4
+                font-weight: $bold
+                color: $main-color
+                margin-right: 1.5vw
+
+        .wiu
+            text-align: center
+            text-transform: uppercase
+            font-size: $title - 8px
+            letter-spacing: 4px
+            color: $main-color
+            font-family: $font-fam
+            font-weight: 400
+
+        h2
+            text-align: center
+            color: $main-text-light
+            font-size: 16px
+            font-family: $font-fam
+            letter-spacing: 2px
+            text-transform: uppercase
+            font-weight: 400
+
+    .btn-wrap
+        position: relative
+        width: 150px
+        margin: 0 $a 150px $a
+
+        a
+            position: absolute
+            height: 50px
+            width: 150px
+            font-size: 18px
+            background: transparent
+            border: 1px solid $main-color
+            text-transform: uppercase
+            font-weight: 400
+            letter-spacing: 1px
+            color: $main-color
+            transition: $transition
+            text-decoration: none
+            text-align: center
+            padding-top: 10px
+
+            &:hover
+                background: $main-color
+                color: $main-text

@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import "./components.sass"
+
 const Header = ({ siteTitle }) => (
   <header>
     <nav>
@@ -22,7 +23,7 @@ const Header = ({ siteTitle }) => (
             <Link to="/about/">About</Link>
           </li>
           <li>
-            <Link to="/">Work</Link>
+            <Link to="/projects">Work</Link>
           </li>
           <li>
             <Link to="/">Contact</Link>
