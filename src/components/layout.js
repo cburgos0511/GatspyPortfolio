@@ -33,12 +33,33 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        {/* <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer> */}
       </div>
+      <footer>
+        <div className="content">
+          <div className="logo-wrap">
+            <div className="logo">
+              <h1>CB</h1>
+            </div>
+          </div>
+
+          <ul>
+            <li> © 2020 - {new Date().getFullYear()}</li>
+            <li>
+              Built with
+              <a href="https://www.gatsbyjs.org"> Gatsby </a> &
+              <a href="https://www.gatsbyjs.org"> Strapi</a>
+            </li>
+            <li>
+              Made on an
+              <a href="https://www.apple.com/mac/"> Apple Computer</a>
+            </li>
+            <li>
+              Hosted on <a href="https://www.heroku.com"> Heroku </a> &
+              <a href="https://www.netlify.com/"> Netlify</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
     </>
   )
 }

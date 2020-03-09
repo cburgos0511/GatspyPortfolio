@@ -44,10 +44,12 @@ $screen-size: 85vw
                             animation: bounce 1s ease
 
 .home-about
+    position: relative
     max-width: 55vw
     margin: 8% 0 8% 15%
 
     p
+        position: relative
         color: $main-text-light
 
         a
@@ -137,3 +139,33 @@ $screen-size: 85vw
                 &:hover
                     background: $main-color
                     color: $main-text
+
+// ABOUT
+
+.about-intro
+    margin-left: 15%
+    margin-bottom: 10vw
+    h1
+        font-family: $font-fam
+        font-size: $title * 2.7
+
+.about-content
+    display: flex
+    width: 90%
+    margin: 20px $a 50px $a
+
+    .about-img
+        width: 40%
+
+    .about-about
+        width: 54%
+        margin: 3rem 0 0 $a
+        line-height: 32px
+
+        h1
+            font-size: 26px
+            letter-spacing: 1px
+
+        p
+            font-size: 18px
+            color: $main-text-light

@@ -26,7 +26,7 @@ const Header = ({ siteTitle }) => (
             <Link to="/projects">Work</Link>
           </li>
           <li>
-            <Link to="/">Contact</Link>
+            <a href="mailto:cburgos0511@gmail.com">Contact</a>
           </li>
         </ul>
       </div>

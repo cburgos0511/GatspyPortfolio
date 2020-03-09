@@ -1,11 +1,13 @@
 $main-color: rgb(218,94,39)
 $title: 28px
 $main-text: #fff
+$main-text-light: #b8b8b8
 $font-fam: PT serif
 $logo-font: 22px
 $a: auto
 $bold: 700
 $transition: all .3s ease
+$test: solid 1px white
 
 *
     margin: 0
@@ -86,3 +88,55 @@ header
             transform: scale(1,1) translateY(0)
         100%
             transform: scale(1,1) translateY(0)
+
+footer
+    position: relative
+    margin-top: 30vw
+    margin-bottom: 5vw
+
+    .content
+        position: relative
+        text-align: center
+        font-size: 14px
+
+        &:before
+            content: ''
+            position: absolute
+            width: 6%
+            height: 1px
+            background: $main-color
+            left: 50%
+            bottom: -20%
+            transform: translate(-50%,-50%)
+
+        .logo-wrap
+            .logo
+                margin: 0 $a 3rem $a
+                position: relative
+                width: 60px
+                height: 60px
+                border: 1px solid $main-color
+                padding: 0
+                transition: $transition
+
+                &:hover
+
+                    animation: bouce 1.2s infinite
+                h1
+                    position: absolute
+                    font-weight: 200
+                    font-size: 26px
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+
+        ul
+            margin-bottom: 0
+            margin-left: 0
+            li
+                list-style: none
+                margin: 0
+                text-align: center
+                color: $main-text-light
+                a
+                    color: $main-color
