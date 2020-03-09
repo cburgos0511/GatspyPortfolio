@@ -18,9 +18,9 @@ module.exports = {
       resolve: "gatsby-source-strapi",
       options: {
         apiURL: process.env.DEPLOY_URL
-          ? `https://desolate-harbor-56311.herokuapp.com/`
+          ? `https://desolate-harbor-56311.herokuapp.com`
           : "http://localhost:1337",
-        contentTypes: ["projects", "user"],
+        contentTypes: ["projects", "user", "bio"],
         queryLimit: 1000,
       },
     },
