@@ -148,7 +148,13 @@ $layout-breakpoint-small: 426px
         margin: 0 0 30vw 0
 
     nav
-        padding: 40px 40px 0 40px
+        padding: 20px 30px 0 30px !important
+
+        .logo-move
+            transform: translateX(35vw)
+        #logo-square
+            width: 45px !important
+            height: 45px !important
 
         #lg-name
             position: absolute
@@ -158,22 +164,24 @@ $layout-breakpoint-small: 426px
             left: -20% !important
         .menu
             position: absolute
-            background: #AFAFAF
+            background: #c4c4c4
             width: 100%
-            height: 60%
-            top: 20%
+            height: 80%
+            top: 10%
             left: -100%
-            border-radius: 15px
+            border-radius: 30px
             z-index: 10000
             transition: $transition
 
             ul
                 flex-direction: column
+                height: 50%
+                padding-top: 30%
                 li
 
                     position: relative
                     list-style: none
-                    padding: 50px 0  10px 50px
+                    padding: 30px 0  30px 50px
                     text-align: center
 
                     a
@@ -187,12 +195,12 @@ $layout-breakpoint-small: 426px
                         &:hover
                             color: $main-color
         .move
-            top: 6rem
-            right: 2rem
+            top: 3.6rem
+            right: 2.9rem
 
         #burger
             position: relative
-            width: 55px
+            width: 45px
             height: 36px
             margin: $a 0 $a 0
             transform: rotate(0deg)
@@ -206,7 +214,7 @@ $layout-breakpoint-small: 426px
                 height: 3.5px
                 width: 100%
                 background: #fff
-                border-radius: 9px
+                border-radius: 20%
                 opacity: 1
                 left: 0
                 transform: rotate(0deg)
@@ -216,10 +224,10 @@ $layout-breakpoint-small: 426px
                     top: 0px
 
                 &:nth-child(2)
-                    top: 18px
+                    top: 16px
 
                 &:nth-child(3)
-                    top: 36px
+                    top: 32px
 
         #burger.open
             span

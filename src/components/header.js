@@ -7,11 +7,12 @@ const Header = ({ siteTitle }) => {
   const [show, setShow] = useState(false)
   let showClass = show ? "menu show" : "menu"
   let x = show ? "open move" : ""
+  let y = show ? "logo-move" : ""
   return (
     <header>
       <nav>
         <div id="logo">
-          <div id="logo-square">
+          <div id="logo-square" className={y}>
             <h1 id="cb">CB</h1>
           </div>
           <h1 id="lg-name">
