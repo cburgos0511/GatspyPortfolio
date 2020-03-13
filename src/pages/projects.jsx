@@ -12,7 +12,7 @@ const Projects = ({ data }) => {
       <Link to={`/${item.node.id}`} className={className} key={item.node.id}>
         <Project
           title={item.node.name}
-          content={item.node.content}
+          content={item.node.content.slice(0, 200) + "..."}
           tech={item.node.technologies}
           img={item.node.img.childImageSharp.fluid}
         />

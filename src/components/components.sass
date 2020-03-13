@@ -140,3 +140,98 @@ footer
                 color: $main-text-light
                 a
                     color: $main-color
+
+$layout-breakpoint-small: 426px
+
+@media (max-width: $layout-breakpoint-small)
+    header
+        margin: 0 0 30vw 0
+
+    nav
+        padding: 40px 40px 0 40px
+
+        #lg-name
+            position: absolute
+            left: -10000%
+
+        .show
+            left: -20% !important
+        .menu
+            position: absolute
+            background: #AFAFAF
+            width: 100%
+            height: 60%
+            top: 20%
+            left: -100%
+            border-radius: 15px
+            z-index: 10000
+            transition: $transition
+
+            ul
+                flex-direction: column
+                li
+
+                    position: relative
+                    list-style: none
+                    padding: 50px 0  10px 50px
+                    text-align: center
+
+                    a
+                        font-size: $title - 5px
+                        text-transform: uppercase
+                        letter-spacing: 3px
+                        color: #000
+                        font-family: sans-serif
+                        transition: $transition
+
+                        &:hover
+                            color: $main-color
+        .move
+            top: 6rem
+            right: 2rem
+
+        #burger
+            position: relative
+            width: 55px
+            height: 36px
+            margin: $a 0 $a 0
+            transform: rotate(0deg)
+            transition: .5s ease-in-out
+            cursor: pointer
+            z-index: 10001
+
+            span
+                display: block
+                position: absolute
+                height: 3.5px
+                width: 100%
+                background: #fff
+                border-radius: 9px
+                opacity: 1
+                left: 0
+                transform: rotate(0deg)
+                transition: .3s ease-in-out
+
+                &:nth-child(1)
+                    top: 0px
+
+                &:nth-child(2)
+                    top: 18px
+
+                &:nth-child(3)
+                    top: 36px
+
+        #burger.open
+            span
+                width: 50%
+                &:nth-child(1)
+                    top: 18px !important
+                    transform: rotate(135deg) !important
+
+                &:nth-child(2)
+                    left: -60px !important
+                    opacity: 0 !important
+
+                &:nth-child(3)
+                    top: 18px
+                    transform: rotate(-135deg) !important
