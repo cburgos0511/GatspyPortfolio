@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
+import ReactMarkdown from "react-markdown"
 import "./template.sass"
 
 const ArticleTemplate = ({ data }) => (
@@ -21,7 +22,7 @@ const ArticleTemplate = ({ data }) => (
       <div className="temp-content">
         <div className="temp-content-p">
           <p className="first-letter">
-            {data.strapiProjects.content.slice(0, 1)}
+            <ReactMarkdown source={data.strapiProjects.content.slice(0, 1)} />
           </p>
 
           <p>{data.strapiProjects.content.slice(1)}</p>
