@@ -35,13 +35,14 @@ header
             position: relative
             width: 60px
             height: 60px
-            background: $main-color
+            background: transparent
+            border: 1px solid $main-color
             margin-right: 40px
             padding: 0
             transition: $transition
+            z-index: 100000
 
             &:hover
-
                 animation: bouce 1.2s infinite
 
             #cb
@@ -53,6 +54,7 @@ header
 
         #logo
             display: flex
+            transition: .4s all ease
 
             #lg-name
                 margin: $a 0 $a 0
@@ -73,7 +75,7 @@ header
                         transition: $transition
 
                         &:hover
-                            color: $main-color
+                            color: #e2e2e24f
 
     @keyframes bouce
 
@@ -121,7 +123,6 @@ footer
                 border: 1px solid $main-color
                 padding: 0
                 transition: $transition
-
                 &:hover
 
                     animation: bouce 1.2s infinite
@@ -154,7 +155,9 @@ $layout-breakpoint-small: 426px
         padding: 20px 30px 0 30px !important
 
         .logo-move
-            transform: translateX(35vw)
+            color: black
+            border: 1px black solid !important
+
         #logo-square
             width: 45px !important
             height: 45px !important
@@ -164,16 +167,15 @@ $layout-breakpoint-small: 426px
             left: -10000%
 
         .show
-            left: -20% !important
+            left: -10% !important
         .menu
             position: absolute
-            background: #c4c4c4
             width: 100%
             height: 80%
             top: 10%
             left: -100%
             border-radius: 30px
-            z-index: 10000
+            z-index: 100000
             transition: $transition
 
             ul
@@ -197,53 +199,72 @@ $layout-breakpoint-small: 426px
 
                         &:hover
                             color: $main-color
-        .move
-            top: 3.6rem
-            right: 2.9rem
+        .expand
+            transform: scale(40)
+            background: $main-color
+        #move
+            display: block !important
+            right: 30px
+            position: absolute
+            width: 50px
+            height: 50px
+            margin: $a 0 $a 0
+            transition: .5s ease-in-out
+            cursor: pointer
+            z-index: 10001
+            border: 1px solid $main-color
+            padding: 10px
+            border-radius: 50%
 
         #burger
             display: block !important
             position: relative
-            width: 45px
-            height: 36px
+            width: 50px
+            height: 50px
             margin: $a 0 $a 0
             transform: rotate(0deg)
             transition: .5s ease-in-out
             cursor: pointer
             z-index: 10001
+            border: 1px solid $main-color
+            padding: 10px
+            border-radius: 50%
+            &:hover
+                background: $main-color
 
             span
                 display: block
                 position: absolute
-                height: 3.5px
-                width: 100%
+                height: 2px
+                width: 30px
                 background: #fff
-                border-radius: 20%
+                border-radius: 20px
                 opacity: 1
-                left: 0
+                left: 9px
                 transform: rotate(0deg)
                 transition: .3s ease-in-out
 
                 &:nth-child(1)
-                    top: 0px
+                    top: 12px
 
                 &:nth-child(2)
-                    top: 16px
+                    top: 22px
 
                 &:nth-child(3)
                     top: 32px
 
         #burger.open
             span
-                width: 50%
+                top: 3px
                 &:nth-child(1)
-                    top: 18px !important
+                    top: 22px !important
                     transform: rotate(135deg) !important
 
                 &:nth-child(2)
                     left: -60px !important
+                    top: 22px
                     opacity: 0 !important
 
                 &:nth-child(3)
-                    top: 18px
+                    top: 22px
                     transform: rotate(-135deg) !important

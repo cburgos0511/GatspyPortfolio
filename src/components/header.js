@@ -6,7 +6,8 @@ import "./components.sass"
 const Header = ({ siteTitle }) => {
   const [show, setShow] = useState(false)
   let showClass = show ? "menu show" : "menu"
-  let x = show ? "open move" : ""
+  let x = show ? "open" : ""
+  let exp = show ? "expand" : ""
   let y = show ? "logo-move" : ""
   return (
     <header>
@@ -35,6 +36,7 @@ const Header = ({ siteTitle }) => {
             </li>
           </ul>
         </div>
+        <div id="move" className={exp}></div>
         <div id="burger" className={x} onClick={() => setShow(!show)}>
           <span></span>
           <span></span>
