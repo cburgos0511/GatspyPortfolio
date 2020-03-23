@@ -35,6 +35,12 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-page-transitions",
+      options: {
+        transitionTime: 600,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,

@@ -8,9 +8,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
 import Header from "./header"
 import "./layout.css"
+import PageTransition from "gatsby-plugin-page-transitions"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <PageTransition>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
@@ -60,7 +60,7 @@ const Layout = ({ children }) => {
           </ul>
         </div>
       </footer>
-    </>
+    </PageTransition>
   )
 }
 
