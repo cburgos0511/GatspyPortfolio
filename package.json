@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Cruz B Burgos",
   "dependencies": {
-    "gatsby": "^2.19.7",
+    "gatsby": "^5.9.0",
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-layout": "^1.2.1",
@@ -14,7 +14,7 @@
     "gatsby-plugin-page-transitions": "^1.0.8",
     "gatsby-plugin-react-helmet": "^3.1.21",
     "gatsby-plugin-sass": "^2.1.29",
-    "gatsby-plugin-sharp": "^2.4.3",
+    "gatsby-plugin-sharp": "^2.14.4",
     "gatsby-source-filesystem": "^2.1.46",
     "gatsby-source-strapi": "0.0.10",
     "gatsby-transformer-sharp": "^2.3.13",
